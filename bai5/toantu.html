@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Toán tử: các phép tính
+        // Các loại: Số học - gán - logic - so sánh 
+
+        // TT gán:
+            //  1, '=' để gán giá trị cho 1 biến
+            //  2, '+='; x = 10 => x+= 2 <=> x = x+2 = 12 
+            //      x = 10 => x*=9 <=> x = x*9 = 90
+            //      x = 10 => x%=9 <=> x = x%9 = 10%9 = 1
+            
+        //  TT số học: +, -, *, /, %, ** <Mũ: 3**10>,
+        alert(5+'10'); // => 510
+        alert(5+'2'+1); // => '52'+1 = 521
+        alert(5+2+'1'); // => 7+'1' = 71
+        // Thứ tự thực hiện: ưu tiên (), nhân chia, từ trái qua phải, theo từng cặp
+        // Cộng với chuỗi => chuỗi
+        // Các phép còn lại với chuỗi => số
+        alert(5*'2'+1); // => 10+1= 11
+        alert('a'/10-1) // => lỗi (NaN - not a number)
+        alert(5*'2'+'1'+1); // => 10+'1'+1= 1011
+
+        // TTSS: >, <, >=, <=, ==, !=, === (chung kiểu dữ liệu), !==
+        let x = 5==5; true
+        let y = 7!=5; true
+        let z = 5 == '5'; true
+        let t = 5==='5'; false
+        
+        // TT Logic: !, &&, ||, &, |
+        let x1 = !5==5; // => false
+        let y1 = 5==5 && 7>=8; // => false
+        let z1 = 5==5 || 7>8; //=> true 
+        let t1= 5!=5 || 7>8; //=> false
+
+    </script>
+</body>
+</html>
