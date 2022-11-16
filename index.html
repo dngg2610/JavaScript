@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="st1">
+    <input type="text" id="st2">
+    <button type="button" onclick="tinhtong()">Tính</button>
+
+    <p id="kq"></p>
+    <input type="text" id="ikq">
+
+    <p id="hieu"></p>
+    <input type="text" id="ihieu">
+
+    <p id="tich"></p>
+    <input type="text" id="itich">
+
+    <p id="thuong"></p>
+    <input type="text" id="ithuong">
+
+    <script>
+        function tinhtong() {
+            let n1 = +document.getElementById('st1').value
+            let n2 = +document.getElementById('st2').value
+            document.getElementById('kq').innerHTML = n1 + n2            
+            document.getElementById('ikq').value = n1 + n2
+
+            document.getElementById('hieu').innerHTML = n1 - n2            
+            document.getElementById('ihieu').value = n1-n2
+
+            document.getElementById('tich').innerHTML = n1 * n2            
+            document.getElementById('itich').value = n1 * n2
+
+            document.getElementById('thuong').innerHTML = n1 / n2            
+            document.getElementById('ithuong').value = n1 / n2
+        }
+    </script>
+</body>
+</html>
