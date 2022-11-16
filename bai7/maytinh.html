@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 70px;
+    }
+    input {
+        width: 500px;
+    }
+</style>
+<body>
+    <input type="text" id="scr"><br><br>
+    <button onclick="inpp('Rad(')">Rad</button>
+    <button onclick="inpp('...')">...</button>
+    <button onclick="inpp('!')">x!</button>
+    <button onclick="inpp('(')">(</button>
+    <button onclick="inpp(')')">)</button>
+    <button onclick="inpp('%')">%</button>
+    <button onclick="inpp()">AC</button><br><br>
+    <button onclick="inpp('lnv')">lnv</button>
+    <button onclick="inpp('sin(')">sin</button>
+    <button onclick="inpp('ln')">ln</button>
+    <button onclick="inpp(7)" style="background-color: rgb(204, 192, 192)">7</button>
+    <button onclick="inpp(8)" style="background-color: rgb(204, 192, 192)">8</button>
+    <button onclick="inpp(9)" style="background-color: rgb(204, 192, 192)">9</button>
+    <button onclick="inpp('/')">/</button><br><br>
+    <button onclick="inpp('π')">π</button>
+    <button onclick="inpp('cos(')">cos</button>
+    <button onclick="inpp('log(')">log</button>
+    <button onclick="inpp(4)" style="background-color: rgb(204, 192, 192)">4</button>
+    <button onclick="inpp(5)" style="background-color: rgb(204, 192, 192)">5</button>
+    <button onclick="inpp(6)" style="background-color: rgb(204, 192, 192)">6</button>
+    <button onclick="inpp('x')">x</button><br><br>
+    <button onclick="inpp('e')">e</button>
+    <button onclick="inpp('tan( ')">tan</button>
+    <button onclick="inpp('√')">√</button>
+    <button onclick="inpp(1)" style="background-color: rgb(204, 192, 192)">1</button>
+    <button onclick="inpp(2)" style="background-color: rgb(204, 192, 192)">2</button>
+    <button onclick="inpp(3)" style="background-color: rgb(204, 192, 192)">3</button>
+    <button onclick="inpp('-')">-</button><br><br>
+    <button onclick="inpp('Ans')">Ans</button>
+    <button onclick="inpp('EXP')">EXP</button>
+    <button onclick="inpp('a**n')">a**n</button>
+    <button onclick="inpp(0)" style="background-color: rgb(204, 192, 192)">0</button>
+    <button onclick="inpp('.')" style="background-color: rgb(204, 192, 192)">.</button>
+    <button onclick="tinh()" style="background-color: rgb(127, 127, 232)">=</button>
+    <button onclick="inpp('+')">+</button><br><br>
+</body>
+</html>
+<script>
+    function inpp(x) {
+        document.getElementById('scr').value +=x
+    }
+    function tinh() {
+        let Pheptinh = document.getElementById('scr').value;
+        document.getElementById('scr').value=eval(Pheptinh)
+    }
+</script>
