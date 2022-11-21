@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="inp" placeholder="hoa quả cần tìm">
+    <button type="button" onclick="tinh()">Xem giá</button>
+    <p id="rs"></p>
+
+    <script>
+        function tinh () {
+            let a = '20000 VNĐ/kg'
+            let b = '30000 VNĐ/kg'
+            let c = '40000 VNĐ/kg'
+            let d = '50000 VNĐ/kg'
+            let n = document.getElementById('inp').value
+            if (n == 'ổi') {
+                document.getElementById('rs').innerHTML = a
+            }
+            if (n == 'táo') {
+                document.getElementById('rs').innerHTML = b
+            }
+            if (n == 'dưa hấu') {
+                document.getElementById('rs').innerHTML = a
+            }
+            if (n == 'xoài') {
+                document.getElementById('rs').innerHTML = b
+            }
+            if (n == 'cam') {
+                document.getElementById('rs').innerHTML = c
+            }
+            if (n == 'chôm chôm') {
+                document.getElementById('rs').innerHTML = c
+            }
+            if (n == 'măng cụt') {
+                document.getElementById('rs').innerHTML = d
+            }
+        }
+    </script>
+</body>
+</html>
