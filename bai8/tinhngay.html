@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button type="button" onclick="fun()">Tính số ngày</button>
+    <div id="in"></div>
+    <script>
+        function fun() {
+            let n = document.getElementById("inp").value
+            let a = "31 ngày"
+            let b = "28 hoặc 29 ngày" 
+            let c = "30 ngày"
+            if (n==1) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==3) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==5) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==7) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==8) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==10) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==12) {
+                document.getElementById("in").innerHTML=a
+            }
+            if (n==2) {
+                document.getElementById("in").innerHTML=b
+            }
+            if (n==4) {
+                document.getElementById("in").innerHTML=c
+            }
+            if (n==6) {
+                document.getElementById("in").innerHTML=c
+            }
+            if (n==9) {
+                document.getElementById("in").innerHTML=c
+            }
+            if (n==11) {
+                document.getElementById("in").innerHTML=c
+            }
+        }
+    </script>
+</body>
+</html>
