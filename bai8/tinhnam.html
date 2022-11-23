@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập năm dương lịch:</p>
+    <input type="text" id="input_year">
+    <button type="button" onclick="tinh()">Tính</button>
+    <h3 id="rs"></h3>
+    <script>
+        function tinh() {
+            let n = +document.getElementById("input_year").value
+            let rs1
+            let rs2
+            switch (n%10){
+                case 0:
+                    rs1 = "Canh "
+                    break;
+                case 1:
+                    rs1 = "Tân "
+                    break;
+                case 2:
+                    rs1 = "Nhâm "
+                    break;
+                case 3:
+                    rs1 = "Quý "
+                    break;
+                case 4:
+                    rs1 = "Giáp "
+                    break;
+                case 5:
+                    rs1 = "Ất "
+                    break;
+                case 6:
+                    rs1 = "Bính "
+                    break;
+                case 7:
+                    rs1 = "Đinh "
+                    break;
+                case 8:
+                    rs1 = "Mậu "
+                    break;
+                case 9:
+                    rs1 = "Kỷ "
+                    break;
+            }
+            switch (n%12) {
+                case 0: 
+                    rs2 = "Thân"
+                    break;
+                case 1: 
+                    rs2 = "Dậu"
+                    break;
+                case 2: 
+                    rs2 = "Tuất"
+                    break;
+                case 3: 
+                    rs2 = "Hợi"
+                    break;
+                case 4: 
+                    rs2 = "Tý"
+                    break;
+                case 5: 
+                    rs2 = "Sửu"
+                    break;
+                case 6: 
+                    rs2 = "Dần"
+                    break;
+                case 7: 
+                    rs2 = "Mão"
+                    break;
+                case 8: 
+                    rs2 = "Thìn"
+                    break;
+                case 9: 
+                    rs2 = "Tỵ"
+                    break;
+                case 10: 
+                    rs2 = "Ngọ"
+                    break;
+                case 11: 
+                    rs2 = "Mùi"
+                    break;
+
+            }
+            alert (rs1 + rs2)
+        }
+    </script>
+</body>
+</html>
