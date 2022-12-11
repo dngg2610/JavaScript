@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [3, 6, 1, 8, 2, 1, 6] // cách khai báo mảng
+                // 0  1  2  3  4  5  6
+        // Mảng: là biến đặc biệt, mà bên trong nó chứa nhiều giá trị. Vị trí bắt đầu từ 0
+        // Các phần tử trong mảng có thể là số, chuỗi, mảng
+        // Cách duy nhất truy xuất 1 phần tử
+        // alert(arr[3])
+        // Cách duyệt
+
+        // In ra các phần tử trong mảng, mỗi phần tử 1 dòng
+        for(let i=0; i<arr.length; i++) {
+            document.write(arr[i] + "<br>")
+        }
+
+        // In ra các phần tử trong mạng, mỗi phần tử trong 1 thẻ h1
+        for(let i=0; i<arr.length; i++) {
+            document.write("<h1>" + arr[i] + "</h1>")
+        }
+
+        // In ra các phần tử trong mạng, mỗi phần tử chẵn trong 1 thẻ h1, lẻ trong thẻ h2
+        for(let i=0; i<arr.length; i++) {
+            if (arr[i]%2==0) {
+                document.write(`<h1>${arr[i]}</h1>`)
+            } else {
+                document.write("<h2>" + arr[i] + "</h2>")
+            }
+        }
+       
+        // tính tích các phần tử trong mảng
+        let tich=1
+        for(let i=0; i<arr.length; i++) {
+            tich *= arr[i];
+        }
+        document.write(tich + "<br>")
+
+        // tính TBC
+        let tong =0;
+        for(let i=0; i<arr.length; i++) {
+            tong += arr[i];
+        }
+        document.write("TBC là: " + tong/arr.length + "<br>")
+
+        // tính TBC các phần tử chia hết cho 3
+        let tong1 =0;
+        let dem=0;
+        for(let i=0; i<arr.length; i++) {
+            if (arr[i]%3==0) {
+                tong1 += arr[i];
+                dem++
+            }
+        }
+        document.write("TBC là : " + tong1/dem + "<br>")
+
+        // tìm max các phần tử trong mảng
+        let max = arr[0];
+        let max_index = 0;
+        for(let i = 0; i<arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }
+        }
+        document.write('Max :' + max+ "<br>");
+
+        // tìm max thứ 2 các phần tử trong mảng
+        let max1 = 0
+        let max2 = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (max1 < arr[i]) {
+                max1 = arr[i];
+            } else if (max2 < max1 && max2 < arr[i]) {
+                max2 = arr[i];
+            }
+        }
+        document.write(max1+ "<br>");
+        document.write(max2+ "<br>");
+
+        // nhập vào a, tìm vị trí của a trong mảng: nếu có thì in vị trí, không thì in -1
+        let index=-1
+        let a = +prompt("Nhập vào số trong mảng:")
+        for (let i; i < arr.length; i++) {
+            if (a==arr[i]) {
+                
+            }
+        }
+
+        //Cho 1 mảng, in ra cac phần tử không bị trùng trong mảng
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = [3, 5, 1, 5, 6, 3, 9]
+        // let a = +prompt("Nhập vào số cần tìm:")
+        // indexOf
+        // alert(arr.indexOf(a))
+        // concat: gộp 2 mảng   
+        // let brr = [100,200];
+        // alert(arr.concat(hrr))
+        // push: thêm 1 phần tử vào cuối
+        // arr.push(10)
+        // alert(arr)
+        // splice: xóa, thay
+        // arr.splice(4,2);
+        // alert(arr)
+        // join: chuyển mảng thành chuỗi
+        // alert(arr.join("*"))
+
+        // Nhập vào n => nhập n phần tử => in ra mảng vừa nhập
+        let n = +prompt('Nhập vào n: ');
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let a = +prompt('Nhập phần tử thứ ' + (i + 1) + ': ');
+            arr.push(a);
+        }
+        alert(arr);
+    </script>
+</body>
+</html>

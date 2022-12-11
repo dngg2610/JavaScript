@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create: tạo ; read: đọc ; update: cập nhật ; delete: xóa
+
+        // Mảng : là tập hợp các giá trị
+        // let animals = [
+        //     " cat ", //0
+        //     " dog ", //1
+        //     " fish ", //2
+        // ]
+        // document.write(animals.length) // lấy độ dài của mảng : 2
+        // let animals2 = new Array(
+        //     " cat ", //0
+        //     " dog " //1
+        // ) // kiểu object
+
+        // Các phương thức để tương tác với mảng 
+        // key word: array method javaScript
+
+        // phương thức Push: thêm 1 hoặc nhiều phần tử vào cuối mảng
+        // animals.push("fish ", "human ");
+        // document.write(animals); // cat, dog, fish
+
+        // animals.pop()
+        // document.write(animals)
+        // animals[1] = " human " // thay dog thành human
+        // document.write(animals)
+
+        // hoặc dùng
+
+        // splice: thay thế 1 hoặc các phần tử trong mảng và chèn  
+        // animals.splice(1, 1, "human"); // vị trí phần tử bắt đầu, số phần tử muốn xóa
+        // document.write(animals)
+
+        // document.write(animals.toString())
+
+        // join: in ra chuỗi và có thể setup lại kí tự ở giữa các phần tử 
+        // document.write(animals.join(";"));
+
+        // shift: xóa phần tử ở đầu
+        // unshift: thêm 1 hoặc nhiều phần tử ở đầu
+        // animals.unshift(" fish ", " human ");
+        // document.write(animals);
+
+        // indexOf: kiểm tra xem có phần tử trong mảng hay không, nếu không có trả về -1, có => trả về phần tử trong mảng
+        // document.write(animals.indexOf("error"))
+
+        // cho 1 mảng numbers = [1,2,3,3,5]  => tìm phần tử xuất hiện 2 lần trong mảng 
+        // let numbers = [1,2,3,3,5];
+        // let count=0;
+        // let number = [1,2,3,3,4,5];
+        // for ( i=0;i<5;i++){
+        //     for ( j= i + 1;j<5;j++){
+        //         if (number[i] == number[j]){
+        //             document.write(number[i])
+        //         }
+        //     }
+        // }
+
+        
+        // dùng 2 mảng để in ra bảng cửu chương <h1></h1>
+        // let numbers1 = [1,2,3,4,5,6,7,8,9]
+        // let numbers2 = [1,2,3,4,5,6,7,8,9]
+
+        // let results = ""
+        // for (let i=0; i <numbers1.length; i++) {
+        //     for (let j=0; j <numbers1.length; j++) {
+        //         results += numbers1[i] + "x" + numbers2[j] + "=" + numbers1[i] * numbers2[j] + "<br>";
+        //     }
+        // }
+        // document.write(results)
+
+        // dùng 2 mảng in bảng cửu chương ra table 
+        // let number1 =[2,2,3,4,5,6,7,8,9]
+        // let number2 =[1,2,3,4,5,6,7,8,9,10]
+
+        // result = "";
+        // document.write("<table border=1 width=100%>")
+        // for (let i = 0;i < number1.length; i++) {
+        //     document.write("<tr>")
+        //     for (let k = 0; k < number2.length; k ++) {
+        //         document.write("<td>" +number1[i] + "x" + number2[k] +"="+ (number1[i]*number2[k]));
+        //         document.write("</td>");
+        //     }
+        //     document.write("</tr>")
+        // }
+        // document.write("</table>")
+
+        // Ma trận: bảng chứa các số 
+        // Mảng 2 chiều: 1 loại mảng mà có phần tử là các mảng khác
+        let numbers = [
+            //0,1,2
+            [1,2,3], //0
+            [4,5,6], //1
+            [7,8,9] //2
+        ]
+        // console.log(numbers);
+        // // lấy phần tử trong mảng 2 chiều
+        // document.write(numbers[2][2])
+
+        // mảng 2 chiều thì khi duyệt qua các phần tử phải dùng mảng 2 chiều : vòng for(i) đầu là duyệt qua các hàng, vòng for 2 duyệt qua các cột (j) \
+
+        // 2 vòng for để in ra các phần tử trong mảng numbers
+        // for (let i=0; i<numbers.length;i++) {
+        //     for (let j=0; j<numbers[i].length; j++) {
+        //         document.write(numbers[i][j])
+        //     }
+        // }
+
+        // tìm phần tử lớn nhất trong mảng
+        let max = numbers[0][0]
+        for (let i=0; i<numbers.length;i++) {
+            for (let j=0; j<numbers[i].length; j++) {
+                if (max<numbers[i][j]) {
+                    max = numbers[i][j]
+                }
+            }
+        }
+        document.write('Max :' + max+ "<br>");
+ 
+        // tính tổng theo hàng, theo cột, tổng theo 2 đường chéo chính
+    </script>
+</body>
+</html>

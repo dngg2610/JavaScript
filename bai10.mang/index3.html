@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let arr = [
+        //     [13, 14, 15], //0
+        //     [25, 26, 27], // 1
+        //     [12, 13, 14] //2
+        // ]
+        // for(let i=0; i<arr.length; i++) {
+        //     for(let j=0; j<arr[i].length; j++) {
+        //         document.write(arr[i][j]+" ")
+        //     }
+        // }
+
+
+
+        // Nhập vào a và tìm vị trí của a trong mảng.
+        // let a = prompt("Nhập a");
+        // for (let i = 0; i < arr.length; i++) {
+        //     for (let j = 0; j < arr[i].length; j++) {
+        //         if (a == arr[i][j]) {
+        //             document.write("Tìm thấy " + a + " tại hàng " + i + " " + "cột " + j +" <br> ")
+        //         }
+        //     }
+        // }
+
+        // Tính tổng từng hàng
+        // let arr = [
+        //     [13, 14, 15, 12], //0
+        //     [25, 26, 27, 100], // 1
+        //     [12, 13, 14, 123], //2
+        //     [1,  3,  4,  12],
+        // ]
+        
+        // for (let i = 0; i < arr.length; i++) {
+        //     let tong=0
+        //     for (let j = 0; j < arr[i].length; j++) {
+        //         tong+=arr[i][j];
+        //     }
+        //     document.write("Tổng hàng "+(i+1)+' là: ' +tong+"<br>")
+        // }
+        
+        // // tổng cột
+        // for (let i = 0; i < arr.length; i++) {
+        //     let tong1=0
+        //     for (let j = 0; j < arr[i].length; j++) {
+        //         tong1+=arr[j][i];
+        //     }
+        //     document.write("Tổng cột "+(j+1)+' là: ' +tong1+"<br>")
+        // }
+
+        // tổng đường chéo chính 
+        // let tong = 0;
+        // for (let i = 0; i < arr.length; i++) {
+        //     tong += arr[i][i];
+        // }
+        // document.write('tong duong cheo chinh la: ' + tong + '<br>');
+
+        // tổng đường chéo phụ 
+        // let tong = 0
+        // for (let i = 0; i < arr.length; i++) {
+        //     tong += arr[i].arr.length - i - 1
+        // }
+        // document.write('tong duong cheo phu la: ' + tong + '<br>');
+
+        // nhập m, n là số hàng, số cột
+        let m = +prompt("Nhập vào số hàng: ");
+        let n = +prompt("Nhập vào số cột: ");
+        let arr = [];
+        // nhập vào các phần tử của ma trận có m hàng n cột
+        for (let i=0; i<m; i++) {
+            arr[i] = []
+            for(let j=0; j<n; j++) {
+                arr[i][j] = +prompt("Nhập vào phần tử: ")
+            }           
+        }
+        // tìm max tổng hàng
+        let max = 0 
+        for (let i=0; i<m; i++) {
+            let sum = 0 
+            for (let j=0; j<n; j++) {
+                sum += arr[i][j]
+            }
+            if (sum>max) {
+                max = sum
+            }
+        }
+        console.log("Tổng lớn nhất của các hàng là: " + max)
+    </script>
+
+</body>
+</html>
