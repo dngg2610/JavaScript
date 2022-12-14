@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // nhập vào một số, tìm vị trí của số đó trong mảng
+        // function tim(mang, so) {
+        //     let viTri=-1;
+        //     for(let i=0; i<mang.length; i++) {
+        //         if(mang[i]==so){
+        //             viTri = 1
+        //         }
+        //     }
+        //     return viTri
+        // }
+        let arr = [3,6,1,8,4,8,2];
+        let x = +prompt("nhập vào số cần tìm")
+        alert(tim(x));
+        function tim(so) {
+            let viTri=-1;
+            for(let i=0; i<arr.length; i++) {
+                if(arr[i]==so){
+                    viTri = i;
+                }
+            }
+            return viTri;
+        }
+
+        // biến toàn cục, biến cục bộ, phạm vi của biến, tham trị, tham chiếu
+
+        // Khi 1 biến cục bộ được đặt tên giống biến toàn cục thì trong phạm vi của nó được ưu tiên hơn, phạm vi của biến là cặp ngoặc lớn nhất mà nó đang ở, biến chỉ dùng trong phạm vi nhỏ
+    </script>
+</body>
+</html>

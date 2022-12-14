@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,6,7]
+        let max1 = arr[0]
+        let max2 = arr[0]
+        for(let i=0; i<arr.length; i++) {
+            if(max1 < arr[i]) {
+                max1=arr[i]
+            } else if (max2 < max1 && max2 < arr[i]) {
+                    max2=arr[i]
+            }
+        }
+        alert("Vậy số lớn thứ hai là " + max2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhập vào số đầu tiên")
+        let b = +prompt("nhập vào số thứ hai")
+        let c = +prompt("nhập vào số thứ ba")
+        function dienTichTamGiac(a,b,c) {
+            if(a+b>c && b+c>a && a+c>b) {
+                alert("Diện tích tam giác là: " + Math.sqrt((a+b+c)*(a+b-c)*(b+c-a)*(c+a-b))/4)
+            } else {
+                alert("Số đo bạn nhập vào không phải là của một tam giác")
+            }
+        }
+        dienTichTamGiac(a,b,c)
+    </script>
+</body>
+</html>
