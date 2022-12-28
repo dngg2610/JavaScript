@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="/Canvas/anh.png" alt="" id="abc" style="width: 300px; position: absolute; top: 100px; left: 500px;">
+
+    <script>
+        let anh = document.getElementById('abc')
+        setInterval(() => {
+            anh.style.left = parseInt(anh.style.left) + 5 + 'px'
+            if (parseInt(anh.style.left) >= window.innerWidth) {
+                anh.style.left = '-300px'
+            }
+        }, 5)
+    //net di het man hinh ben phai thi quay tro lai ben trai roi di tiep nhu luc dau
+    </script>
+</body>
+
+</html>

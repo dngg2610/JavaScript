@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="/Canvas/anh.png" alt="" id="abc"
+        style="width: 100px; height: 100px; position: absolute;top: 0px; left: 0px;">
+    <script>
+        let anh = document.getElementById('abc');
+        let speedX = 5;
+        let speedY = 0;
+        setInterval(() => {
+            anh.style.left = parseInt(anh.style.left) + speedX + 'px';
+            anh.style.top = parseInt(anh.style.top) + speedY + 'px';
+        }, 25)
+        window.addEventListener('keydown', (x) => {
+            if (x.key == 'a') {
+                speedY = 0
+                speedX = -5
+            }
+            if (x.key == 's') {
+                speedY = 5
+                speedX = 0
+            }
+            if (x.key == 'd') {
+                speedY = 0
+                speedX = 5
+            }
+            if (x.key == 'w') {
+                speedY = -5
+                speedX = 0
+            }
+            if (x.key == 'm') {
+                speedY = 0
+                speedX = 0
+            }
+        })
+    </script>
+</body>
+
+</html>

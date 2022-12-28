@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="/Canvas/anh.png" alt="" id="abc"
+        style="width: 100px; height: 100px; position: absolute;top: 0px; left: 0px;">
+    <script>
+        let anh = document.getElementById('abc');
+        let speedX = 5;
+        let speedY = 0;
+        let s = 0;
+        setInterval(() => {
+            anh.style.left = parseInt(anh.style.left) + speedX + 'px';
+            anh.style.top = parseInt(anh.style.top) + speedY + 'px';
+            s += 5;
+            if (s >= window.innerWidth - parseInt(anh.style.width)) {
+                speedX = 0;
+                speedY = 5;
+            }
+            if (s >= window.innerWidth + window.innerHeight - parseInt(anh.style.width) - parseInt(anh.style.height)) {
+                speedX = -5;
+                speedY = 0;
+            }
+            if (s >= 2 * window.innerWidth + window.innerHeight - 2 * parseInt(anh.style.width) - parseInt(anh.style.height)) {
+                speedX = 0;
+                speedY = -5;
+            }
+            if (s >= 2 * window.innerWidth + 2 * window.innerHeight - 2 * parseInt(anh.style.width) - 2 * parseInt(anh.style.height)) {
+                speedX = 5;
+                speedY = 0;
+                s = 0
+            }
+        }, 5)
+    </script>
+</body>
+
+</html>

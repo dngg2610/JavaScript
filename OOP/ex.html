@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Tạo lớp Mèo: tên, cân nặng, ăn()
+        Tạo lớp chuột: tên, cân nặng
+     -->
+</body>
+
+<script>
+    class Cat {
+        constructor(tên, cân) {
+            this.tên = tên
+            this.cân= cân
+        } 
+        ăn(chuot) {
+            this.cân += chuot.cân/3
+            chuot.cân=0
+        }     
+        getInfo() {
+            alert('Mèo '+this.tên+' nặng '+this.cân)
+        }
+        
+    }
+    class Mouse {
+        constructor(tên, cân) { 
+            this.tên = tên
+            this.cân= cân
+        }
+        getInfo() {
+            if(this.cân == 0) {
+                alert('RIP')
+            } else {
+                alert('Chuột '+this.tên+' nặng ' +this.cân)
+            }
+        }
+    }
+    let cat1 = new Cat ('A', 20);
+    let mouse = new Mouse ('J', 5)
+    cat1.getInfo()
+    mouse.getInfo()
+    cat1.ăn(chuot)
+</script>
+
+</html>

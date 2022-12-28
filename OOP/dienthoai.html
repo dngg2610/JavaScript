@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor(name, batterry, writing, inbox, send) {
+                this.name = name
+                this.batterry = batterry
+                this.writing = writing
+                this.inbox = inbox
+                this.sent = sent
+                this.isOff = false
+            }
+            powerOn() {
+                if (this.isOff == false) {
+                    alert('điện thoại ' + this.name + ' đang bật')
+                } else {
+                    alert('điện thoại ' + this.name + ' đang tắt')
+
+                }
+                this.batterry--
+            }
+            turnOnOff() {
+                this.isOff = !this.isOff
+                this.batterry--
+            }
+            charge() {
+                this.batterry++
+            }
+            receiveMess(mobile){
+                this.mobile.push(mobile.writing)
+                mobile.sent.push(mobile.writing)
+                mobile.writing=''
+            }
+        }
+    </script>
+</body>
+
+</html>
